@@ -8,7 +8,7 @@ namespace Generics
             while(true)
             {
                 Console.WriteLine("Enter the Choice\n1)Int Data Type\n2)Float Data Type\n3)String Data Type"+
-                    "\n4)Generic Method");
+                    "\n4)Generic Method\n5)Generic Class");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch(choice)
                 {
@@ -28,9 +28,14 @@ namespace Generics
                         Console.WriteLine(result3);
                         break;
                     case 4:
-                        Refactor1 refactor1=new Refactor1();
+                        GenericMethod refactor1=new GenericMethod();
                         string result4 = refactor1.GenericCompare("3","7", "9");
                         Console.WriteLine(result4);
+                        break;
+                    case 5:
+                        GenericClass<int> genericClass = new GenericClass<int>(2, 5, 8);
+                        int result5 = genericClass.GenericCompare();
+                        Console.WriteLine(result5);
                         break;
                 }
             }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Generics
 {
-    public class Refactor1
+    public class GenericMethod
     {
         public T GenericCompare<T>(T first, T second, T third) where T: IComparable
         {
