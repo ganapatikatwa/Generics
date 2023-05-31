@@ -8,7 +8,7 @@ namespace Generics
             while(true)
             {
                 Console.WriteLine("Enter the Choice\n1)Int Data Type\n2)Float Data Type\n3)String Data Type"+
-                    "\n4)Generic Method\n5)Generic Class");
+                    "\n4)Generic Method\n5)Generic Class\n6)More then Three Parameters");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch(choice)
                 {
@@ -36,6 +36,11 @@ namespace Generics
                         GenericClass<int> genericClass = new GenericClass<int>(2, 5, 8);
                         int result5 = genericClass.GenericCompare();
                         Console.WriteLine(result5);
+                        break;
+                    case 6:
+                        MoreThenTherees<char> moreThenTherees = new MoreThenTherees<char>('a', 'B','C', 'e');
+                        char result6 = moreThenTherees.GenericCompare();
+                        Console.WriteLine(result6);
                         break;
                 }
             }
